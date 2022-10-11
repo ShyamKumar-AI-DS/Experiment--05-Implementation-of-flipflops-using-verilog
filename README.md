@@ -106,19 +106,21 @@ Q(t+1)=T′Q(t)+TQ(t)′
 1.Open Quartus II and select new project and choose the file location.
 
 2.Module Declaration. Module should have the file name.
-Declare Inputs and outputs.
+D
+3.eclare Inputs and outputs.
 
-3.Use assign declaration and wire to define the functionality of logic circuits.
+4.Use assign declaration and wire to define the functionality of logic circuits.
 
-4.End the program with endmodule.
+5.End the program with endmodule.
 
-5.Run the program and choose RTL viewer to get RTL realization.
+6.Run the program and choose RTL viewer to get RTL realization.
 ~~~
 
 
 ### PROGRAM 
 ~~~
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
+Program for flipflops  and verify its truth table in quartus using 
+Verilog programming.
 Developed by: Shyam Kumar A
 RegisterNumber: 212221230098
 ~~~
