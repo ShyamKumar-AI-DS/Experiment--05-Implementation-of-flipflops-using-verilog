@@ -102,39 +102,93 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
 ### Procedure
-/* write all the steps invloved */
+~~~
+1.Open Quartus II and select new project and choose the file location.
 
+2.Module Declaration. Module should have the file name.
+Declare Inputs and outputs.
+
+3.Use assign declaration and wire to define the functionality of logic circuits.
+
+4.End the program with endmodule.
+
+5.Run the program and choose RTL viewer to get RTL realization.
+~~~
 
 
 ### PROGRAM 
-/*
+~~~
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-
-
-
-
-
-
-### RTL LOGIC FOR FLIPFLOPS 
-
-
-
-
-
-
-
-
+Developed by: Shyam Kumar A
+RegisterNumber: 212221230098
+~~~
+~~~
+1.SR FLIPFLOP:
+module sr(s,r,clk,q,qbar);
+input s,r,clk;
+output q,qbar;
+wire x,y;
+nand (x,s,clk);
+nand(y,r,clk);
+nand (q,x,qbar);
+nand (qbar,y,q);
+endmodule
+~~~
+~~~
+2.JK FLIPFLOP:
+module jk(j,k,clk,q,qbar);
+input j,k,clk;
+output q,qbar;
+wire p,s;
+nand(p,j,clk,qbar);
+nand(s,k,clk,q);
+nand(q,p,qbar);
+nand(qbar,s,q);
+endmodule 
+~~~
+~~~
+3. T FLIPFLOP:
+module tf(t,clk,q,qbar);
+input t,clk;
+output q,qbar;
+wire x,y;
+nand (x,t,clk,qbar);
+nand (y,clk,t,q);
+nand (q,x,qbar);
+nand (qbar,y,q);
+endmodule
+~~~
+~~~
+2. D FLIPFLOP:
+module df(d,clk,q,qbar);
+input d,clk;
+output q,qbar;
+assign dbar = ~d;
+wire x,y;
+nand (x,d,clk);
+nand (y,dbar,clk);
+nand (q,x,qbar);
+nand (qbar,y,q);
+endmodule  
+~~~
+## RTL LOGIC FOR FLIPFLOPS 
+### SR FLIPFLOP :
+![out](SRIMG.png)
+### JK FLIPFLOP :
+![out](JKIMG.png)
+### T FLIPFLOP :
+![out](TIMG.png)
+### D FLIPFLOP :
+![out](DIMG.png)
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
-
-
-
-
-
-
-
-
-### RESULTS 
+### SR FLIPFLOP :
+![out](SRTIM.png)
+### JK FLIPFLOP :
+![out](JKTIM.png)
+### T FLIPFLOP :
+![out](TTIM.png)
+### D FLIPFLOP :
+![out](DTIM.png)
+### RESULTS :
+All the flipflops are implementde using verilog and their functionality has been validated using their functional tables.
